@@ -9,11 +9,13 @@ class Bob{
     }
     display(){
         var pos=this.body.position
+        var angle = this.body.angle; //wasn't there
         push()
         translate(pos.x,pos.y)
-        rectMode(CENTER);
+        rotate(angle);
+        //rectMode(CENTER); not needed
         fill(this.color)
-        ellipse(0,0,this.r,this.r)
+        ellipse(0,0,60,60) //added width and height
         pop();
     }
 }

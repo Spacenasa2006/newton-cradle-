@@ -5,7 +5,7 @@ class Rope{
             pointB:pointB,
             stiffness:1,
             angularStiffness:1,
-            length:220,
+            length:220 //removed ,
         }
         this.pointB=pointB;
         this.pointX=bodyA.x;
@@ -19,7 +19,9 @@ class Rope{
             var pointB=this.pointB
             push()
             strokeWeight(2);
+            stroke("red") //newly added
             line(pointB.x,pointB.y,pointA.x,pointA.y);
+            pop()
         }
     }
 }
